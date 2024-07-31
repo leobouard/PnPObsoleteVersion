@@ -11,10 +11,12 @@ param(
     [int]$MaxVersionHistory,
 
     [Parameter(ParameterSetName = 'Age')]
-    [int]$MaxVersionAge
+    [int]$MaxVersionAge,
+
+    [switch]$NoTranscript
 )
 
-Start-Transcript "$PSScriptRoot\logs\Remove-PnPObsoleteVersion_$(Get-Date -Format 'yyyy-MM-dd_HHmmss').txt"
+if ($NoTranscript.IsPresent -eq $false) { Start-Transcript "$PSScriptRoot\logs\Remove-PnPObsoleteVersion_$(Get-Date -Format 'yyyy-MM-dd_HHmmss').txt" }
 $start = Get-Date
 
 # Connect to SharePoint site
@@ -108,4 +110,4 @@ $results = [PSCustomObject]@{
 $results | Format-List
 $results | Export-Csv -Path "$PSScriptRoot\results.csv" -Append -Encoding UTF8 -Delimiter ';'
 
-Stop-Transcript
+if ($NoTranscript.IsPresent -eq $false) { Stop-Transcript }

@@ -9,6 +9,8 @@ param(
     [int]$MaxVersionAge = 2
 )
 
+Start-Transcript "$PSScriptRoot\logs\Start-PnPSiteCleanup_$(Get-Date -Format 'yyyy-MM-dd_HHmmss').txt"
+
 # Connect to SharePoint Admin
 $appSettings = Get-Content -Path "$PSScriptRoot\registeredAppSettings.json" | ConvertFrom-Json -AsHashtable
 $appSettings.Add('Url', $AdminUrl)
@@ -22,12 +24,23 @@ $limit = $SiteMinimumSizeGB * 1000
 $sites = $sites | Where-Object { $_.StorageUsageCurrent -gt $limit } |
 Sort-Object StorageUsageCurrent -Descending |
 Select-Object Url, Title, StorageUsageCurrent
+Write-Host "$(($sites | Measure-Object).Count) site(s) with over $SiteMinimumSizeGB GB of storage usage"
 
 # Exclude all SharePoint site that have been done recently (in the last X days)
 $results = Import-Csv -Path "$PSScriptRoot\results.csv" -Delimiter ';' -Encoding UTF8 |
 Where-Object { (Get-Date $_.EndTime) -lt (Get-Date).AddDays(-$DaysBetweenCleanup) }
+$sites = $sites | Where-Object { $_.Url -notin $results.Site }
+Write-Host "$(($sites | Measure-Object).Count) site(s) left to clean"
+
+# Pick X sites randomly
+$sites = try { $sites | Get-Random -Count $SitesPerCleanup -EA Stop } catch { $sites }
+Write-Host "The following site(s) are going to be cleaned:"
+$sites | Format-List
 
 # Remove obsolete versions
-$sites | Where-Object { $_.Url -notin $results.Site } | Get-Random -Count $SitesPerCleanup | ForEach-Object {
-    .\Remove-PnPObsoleteVersion -MaxVersionAge $MaxVersionAge -SiteURL $_.Url
+$sites | ForEach-Object {
+    Write-Host "Processing site: $($_.Url)"
+    .\Remove-PnPObsoleteVersion -MaxVersionAge $MaxVersionAge -SiteURL $_.Url -NoTranscript
 }
+
+Stop-Transcript

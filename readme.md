@@ -7,6 +7,7 @@ Remove every obsolete versions from all files in a SharePoint site. Versions are
 - `-SiteUrl`: Indicate the URL of the SharePoint site that you want to cleanup
 - `-MaxVersionHistory`: Maximum number of versions to keep on each file
 - `-MaxVersionAge`: Delete all versions older than X year(s)
+- `-NoTranscript`: Doesn't create a transcript file
 
 ## Start-PnPSiteCleanup
 
