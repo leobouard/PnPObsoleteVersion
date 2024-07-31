@@ -67,7 +67,7 @@ $removed = $ListItems | ForEach-Object {
     $versionsToDelete = Get-PnPFileVersion -Url $fileUrl | Where-Object $filter2 | Select-Object @splat
 
     # Write progress
-    Write-Host "[$(Get-Date -Format 'yyyy-MM-dd HH:mm:ss')] Processing '$fileName' with $($versionsToDelete.Count) version(s)" -ForegroundColor Yellow
+    Write-Host "[$(Get-Date -Format 'yyyy-MM-dd HH:mm:ss')] [$i/$total] Processing '$fileName' with $($versionsToDelete.Count) version(s)" -ForegroundColor Yellow
 
     # Remove old versions
     $j = 0
