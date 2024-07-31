@@ -28,7 +28,7 @@ Write-Host "$(($sites | Measure-Object).Count) site(s) with over $SiteMinimumSiz
 
 # Exclude all SharePoint site that have been done recently (in the last X days)
 $results = Import-Csv -Path "$PSScriptRoot\results.csv" -Delimiter ';' -Encoding UTF8 |
-Where-Object { (Get-Date $_.EndTime) -lt (Get-Date).AddDays(-$DaysBetweenCleanup) }
+Where-Object { (Get-Date $_.EndTime) -gt (Get-Date).AddDays(-$DaysBetweenCleanup) }
 $sites = $sites | Where-Object { $_.Url -notin $results.Site }
 Write-Host "$(($sites | Measure-Object).Count) site(s) left to clean"
 
