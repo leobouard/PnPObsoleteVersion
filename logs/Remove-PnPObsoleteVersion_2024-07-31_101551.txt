@@ -1,0 +1,102 @@
+Get all files...
+Files with versions older than 2 year(s): 30
+Versions count: 90
+[2024-07-31 10:18:19] Processing '*************************************************.xlsx' with 7 version(s)
+    Remove version: 512
+    Remove version: 1024
+    Remove version: 1536
+    Remove version: 2048
+    Remove version: 2560
+    Remove version: 3072
+    Remove version: 3584
+[2024-07-31 10:18:21] Processing '*************************************************************.pdf' with 1 version(s)
+    Remove version: 512
+[2024-07-31 10:18:21] Processing '**************************************************************.pdf' with 1 version(s)
+    Remove version: 512
+[2024-07-31 10:18:22] Processing '************************.xlsm' with 1 version(s)
+    Remove version: 512
+[2024-07-31 10:18:22] Processing '***********************************************.jpg' with 1 version(s)
+    Remove version: 512
+[2024-07-31 10:18:23] Processing '**********************************************************************.pdf' with 1 version(s)
+    Remove version: 512
+[2024-07-31 10:18:23] Processing '*******************************************************************.pdf' with 1 version(s)
+    Remove version: 512
+[2024-07-31 10:18:24] Processing '*************************************************.pdf' with 1 version(s)
+    Remove version: 512
+[2024-07-31 10:18:24] Processing '***************************************************************************.pdf' with 2 version(s)
+    Remove version: 512
+    Remove version: 1024
+[2024-07-31 10:18:28] Processing '*****************************************.pdf' with 1 version(s)
+    Remove version: 512
+[2024-07-31 10:18:29] Processing '*****************************************.pdf' with 1 version(s)
+    Remove version: 512
+[2024-07-31 10:18:29] Processing '***************************************.pdf' with 1 version(s)
+    Remove version: 512
+[2024-07-31 10:18:30] Processing '************************************************.pdf' with 1 version(s)
+    Remove version: 512
+[2024-07-31 10:18:30] Processing '**************.xlsx' with 13 version(s)
+    Remove version: 512
+    Remove version: 1024
+    Remove version: 1536
+    Remove version: 2048
+    Remove version: 2560
+    Remove version: 3072
+    Remove version: 3584
+    Remove version: 4096
+    Remove version: 4608
+    Remove version: 5120
+    Remove version: 5632
+    Remove version: 6144
+    Remove version: 6656
+[2024-07-31 10:18:40] Processing '***************************************************.pdf' with 1 version(s)
+    Remove version: 512
+[2024-07-31 10:18:41] Processing '****************************************.pdf' with 1 version(s)
+    Remove version: 512
+[2024-07-31 10:18:41] Processing '********************************************************.pdf' with 1 version(s)
+    Remove version: 512
+[2024-07-31 10:18:42] Processing '******************************************.pdf' with 1 version(s)
+    Remove version: 512
+[2024-07-31 10:18:42] Processing '*************************************************.pdf' with 1 version(s)
+    Remove version: 512
+[2024-07-31 10:18:42] Processing '*********************************************************************.pdf' with 1 version(s)
+    Remove version: 512
+[2024-07-31 10:18:43] Processing '**************************************.pdf' with 2 version(s)
+    Remove version: 512
+    Remove version: 1024
+[2024-07-31 10:18:44] Processing '**********************************.pdf' with 2 version(s)
+    Remove version: 512
+    Remove version: 1024
+[2024-07-31 10:18:44] Processing '****************************************.pdf' with 2 version(s)
+    Remove version: 512
+    Remove version: 1024
+[2024-07-31 10:18:45] Processing '********************************************.pdf' with 2 version(s)
+    Remove version: 512
+    Remove version: 1024
+[2024-07-31 10:18:46] Processing '*************************************.pdf' with 2 version(s)
+    Remove version: 512
+    Remove version: 1024
+[2024-07-31 10:18:47] Processing '************************.xlsx' with 7 version(s)
+    Remove version: 512
+    Remove version: 1024
+    Remove version: 1536
+    Remove version: 2048
+    Remove version: 2560
+    Remove version: 3072
+    Remove version: 3584
+[2024-07-31 10:18:49] Processing '*******************************.xlsx' with 1 version(s)
+    Remove version: 512
+[2024-07-31 10:18:49] Processing '*****************.xlsx' with 1 version(s)
+    Remove version: 512
+[2024-07-31 10:18:50] Processing '***********************.pptx' with 1 version(s)
+    Remove version: 512
+[2024-07-31 10:18:50] Processing '********************.pptx' with 1 version(s)
+    Remove version: 512
+
+Site           : https://contoso.sharepoint.com/sites/leadership-connection
+FilesCount     : 30
+GBRecovered    : 2.25
+VersionDeleted : 60
+Errors         : 0
+StartTime      : 2024-07-31 10:15:51
+EndTime        : 2024-07-31 10:18:51
+TimeElapsedSec : 179
