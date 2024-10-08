@@ -1,5 +1,7 @@
 # PnPObsoleteVersion
 
+There is a much more efficient way to this now (french article): [Le versioning sur SharePoint | LaBouaBouate](https://www.labouabouate.fr/2024/07/11/le-versioning-sur-sharepoint)
+
 ## Remove-PnPObsoleteVersion
 
 Remove every obsolete versions from all files in a SharePoint site. Versions are considerate obsolete if they are either too old or too numerous.
